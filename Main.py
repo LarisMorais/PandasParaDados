@@ -68,7 +68,7 @@ df["Salário"].mean()  #media
 
 #Limpeza de dados
 
-df2 = pd.read_csv("/content/drive/MyDrive/Colab Notebooks/DADOS/funcionarios_nulos.csv")
+df2 = pd.read_csv("funcionarios_nulos.csv")
 df2
 
 df2.dropna() #remove linhas com valores nulos
@@ -106,13 +106,13 @@ df.sort_values(by="Salário", ascending=False) #ordenando salario do maior para 
 
 #Combinando dados de dois dataframes
 
-df_deptos = pd.read_csv("/content/drive/MyDrive/Colab Notebooks/DADOS/departamentos.csv")
+df_deptos = pd.read_csv("departamentos.csv")
 df_deptos
 
 df_final = pd.merge(df, df_deptos, left_on="ID Departamento", right_on="ID Departamento")  #juntando DF como uma nova coluna e sinalizando o relacionamento das duas tabelas
 df_final
 
-df_novos = pd.read_csv("/content/drive/MyDrive/Colab Notebooks/DADOS/novos_funcionarios.csv")
+df_novos = pd.read_csv("novos_funcionarios.csv")
 df_novos
 
 df_todos = pd.concat([df,df_novos], ignore_index=True)  #concatenando dois data frames
