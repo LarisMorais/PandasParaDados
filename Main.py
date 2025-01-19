@@ -18,7 +18,7 @@ s
 
 #Lendo tabelas
 
-df = pd.read_csv("/content/drive/MyDrive/Colab Notebooks/DADOS/funcionarios.csv") #lendo csv, caso fosse excel necessario alterar read_excel e extensão do arquivo
+df = pd.read_csv("funcionarios.csv") #lendo csv, caso fosse excel necessario alterar read_excel e extensão do arquivo
 df
 
 #Manipulação basica de dados
@@ -83,7 +83,7 @@ df2["Idade"] = df2["Idade"].astype(int) #era float,converte para inteiro
 
 #Contando Ocorrencias
 
-df = pd.read_csv("/content/drive/MyDrive/Colab Notebooks/DADOS/funcionarios.csv")
+df = pd.read_csv("funcionarios.csv")
 df
 
 df["Ativo"].value_counts()  #quanto tem de funcionario ativos e não ativos
